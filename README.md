@@ -8,7 +8,7 @@ It currently hosts
 - The complete lecture slides for [CS 97SI](http://stanford.edu/class/cs97si/) under [97si_slides/](97si_slides/) folder. 
 
 *Much of this notebook is compiled from codes written by previous Stanford team members and coaches.*
-The classical problem is mainly submoduled from this [repo](https://github.com/jeffreysijuntan/ICPC)
+
 
 Generating team notebook
 ========================
@@ -24,6 +24,8 @@ python3 generate_html.py
 ``` 
 
 Edit the index in [contents.txt](contents.txt) to include more content
+
+The classical problem can be indexed from this [repo](https://github.com/jeffreysijuntan/ICPC) after `git submodule update --init`
 
 PDF version
 -----------
