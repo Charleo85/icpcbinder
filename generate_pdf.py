@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import subprocess
 code_dir = "code"
-title = "Stanford ACM-ICPC Team Notebook"
+title = "UVa ACM-ICPC Team Notebook"
 
 def get_sections():
     sections = []
