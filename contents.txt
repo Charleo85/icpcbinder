@@ -3,6 +3,11 @@
 # Subsections within a section should follow the format:
 #   [filename within code directory][tab character \t][subsection title]
 
+[Templates]
+template/template.cpp	C++ template
+template/vimrc.vim	Vim settings
+#template/EmacsSettings.txt	Emacs settings
+
 [Combinatorial optimization]
 combinatorial/MaxFlow.cc	Dense max-flow
 combinatorial/Dinic.cc	Sparse max-flow
@@ -68,7 +73,6 @@ utils/Dates.cc	Dates
 utils/Dates.java	Dates (Java)
 utils/DecFormat.java	Decimal output formatting (Java)
 utils/LogLan.java	Regular expressions
-#utils/EmacsSettings.txt	Emacs settings
 
 [Classical Problems]
 classical/tarjan2sat.cc	Illumination(Tarjan 2SAT)
@@ -81,6 +85,6 @@ classical/hanoi.cpp	Hanoi (recusive)
 classical/basesum.cpp	basesum (number theory)
 classical/flood.cpp	Vin Diagram (flood)
 classical/suffixsubstring.cpp	substring (suffix)
-classical/manhattan.cpp	average manhattan (comptational geometry)
-
-
+classical/manhattan.cpp	average manhattan (computational geometry, expectation in 2D)
+icpc/math/mobilization.cpp	mobilization (convex hull)
+icpc/dp/gwensgift.cpp	gwen's gift (DP, pattern simulation) 
