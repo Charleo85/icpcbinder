@@ -2,9 +2,7 @@ UVa ACM-ICPC Binder
 =================
 
 This repository is forked from the Stanford ACM-ICPC teams.
-It currently hosts (a) the team notebook, and (b) complete lecture slides for [CS 97SI](http://stanford.edu/class/cs97si/).
-
-Much of this notebook is compiled from codes written by previous Stanford team members and coaches.
+It currently hosts (a) the team notebook, and (b) complete lecture slides for [CS 97SI](http://stanford.edu/class/cs97si/). Much of this notebook is compiled from codes written by previous Stanford team members and coaches.
 
 Generating team notebook
 ========================
