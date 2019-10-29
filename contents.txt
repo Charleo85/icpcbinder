@@ -4,7 +4,7 @@
 #   [filename within code directory][tab character \t][subsection title]
 
 [Combinatorial optimization]
-#MaxFlow.cc	Dense max-flow
+MaxFlow.cc	Dense max-flow
 Dinic.cc	Sparse max-flow
 MinCostMaxFlow.cc	Min-cost max-flow
 PushRelabel.cc	Push-relabel max-flow	
@@ -18,13 +18,15 @@ GraphCutInference.cc	Graph cut inference
 [Geometry]
 ConvexHull.cc	Convex hull
 Geometry.cc	Miscellaneous geometry
-JavaGeometry.java	Java geometry
+LatLong.cc	Latitude/longitude
 Geom3D.java	3D geometry
 Delaunay.cc	Slow Delaunay triangulation
+JavaGeometry.java	Java geometry
 #Delaunay.java	Slow Delaunay triangulation (Java)
 
 [Numerical algorithms]
 Euclid.cc	Number theory (modular, Chinese remainder, linear Diophantine)
+Primes.cc	Prime numbers
 GaussJordan.cc	Systems of linear equations, matrix inverse, determinant
 ReducedRowEchelonForm.cc	Reduced row echelon form, matrix rank
 FFT_new.cc	Fast Fourier transform
@@ -32,13 +34,14 @@ Simplex.cc	Simplex algorithm
 #FFT.cc	Fast Fourier transform (C++)
 
 [Graph algorithms]
-#BellmanFord.cc	Bellman-Ford shortest paths with negative edge weights (C++)
-#DijkstraFloyd.cc	Dijkstra and Floyd's algorithm (C++)
+BellmanFord.cc	Bellman-Ford shortest paths with negative edge weights
+DijkstraFloyd.cc	Dijkstra and Floyd's algorithm
 FastDijkstra.cc	Fast Dijkstra's algorithm
 SCC.cc	Strongly connected components
 EulerianPath.cc	Eulerian path
-#Kruskal.cc	Kruskal's algorithm
-#Prim.cc	Minimum spanning trees
+Kruskal.cc	Kruskal's algorithm
+Prim.cc	Minimum spanning trees
+TopologicalSort.cc	Topological sort
 
 [Data structures]
 SuffixArray.cc	Suffix array
@@ -46,23 +49,37 @@ BIT.cc	Binary Indexed Tree
 UnionFind.cc	Union-find set
 KDTree.cc	KD-tree
 splay.cc	Splay tree
-SegmentTreeLazy.java	Lazy segment tree
 LCA.cc	Lowest common ancestor
+SegmentTreeLazy.java	Lazy segment tree(Java)
 
 [Miscellaneous]
 LongestIncreasingSubsequence.cc	Longest increasing subsequence
-Dates.cc	Dates
-LogLan.java	Regular expressions
-Primes.cc	Prime numbers
-IO.cc	C++ input/output
 KMP.cc	Knuth-Morris-Pratt
-LatLong.cc	Latitude/longitude
-EmacsSettings.txt	Emacs settings
-#TopologicalSort.cc	Topological sort (C++)
-#Dates.java	Dates (Java)
-#DecFormat.java	Decimal output formatting (Java)
-#RandomSTL.cc	Random STL stuff
-#CSP.cc	Constraint satisfaction problems
-#FastExpo.cc	Fast exponentiation
-#LCS.cc	Longest common subsequence
+#EmacsSettings.txt	Emacs settings
+CSP.cc	Constraint satisfaction problems
+FastExpo.cc	Fast exponentiation
+LCS.cc	Longest common subsequence
 #MillerRabin.c	Miller-Rabin Primality Test (C)
+
+[Formating, STL]
+IO.cc	C++ input/output
+RandomSTL.cc	STL next permutation
+Dates.cc	Dates
+Dates.java	Dates (Java)
+DecFormat.java	Decimal output formatting (Java)
+LogLan.java	Regular expressions
+
+[Classical Problems]
+classical/tarjan2sat.cc	Illumination(Tarjan 2SAT)
+classical/buggyrobot.cpp	BuggyRobot (Dijkstra + state hash)
+classical/paint.cpp	Paint (dp + binary search backtrace)
+classical/rainbow.cpp	Rainbow (dfs + mark)
+classical/securitybadge.cpp	Security badge (dfs + memorization)
+classical/radio.cpp	Radio (string hashing)
+classical/hanoi.cpp	Hanoi (recusive)
+classical/basesum.cpp	basesum (number theory)
+classical/flood.cpp	Vin Diagram (flood)
+classical/suffixsubstring.cpp	substring (suffix)
+classical/avgmanhattan.cpp	average manhattan (comptational geometry)
+
+

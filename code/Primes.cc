@@ -1,19 +1,80 @@
 // O(sqrt(x)) Exhaustive Primality Test
 #include <cmath>
 #define EPS 1e-7
-typedef long long LL;
-bool IsPrimeSlow (LL x)
+typedef long long ll;
+bool IsPrimeSlow (ll x)
 {
   if(x<=1) return false;
   if(x<=3) return true;
   if (!(x%2) || !(x%3)) return false;
-  LL s=(LL)(sqrt((double)(x))+EPS);
-  for(LL i=5;i<=s;i+=6)
+  ll s=(ll)(sqrt((double)(x))+EPS);
+  for(ll i=5;i<=s;i+=6)
   {
     if (!(x%i) || !(x%(i+2))) return false;
   }
   return true;
 }
+
+// O(n) fast generate prime number list
+const ll limit = 10000000; // prime number upper bound
+bool prime[limit+1]; // bool of squence is prime or not
+vector<ll> primes; // list of prime in order
+
+void generateprimes(){
+    for (ll i = 0; i < limit; i++) 
+        prime[i] = false; 
+	prime[2] = true;
+	prime[3] = true;	
+    for (ll x = 1; x * x < limit; x++) { 
+        for (ll y = 1; y * y < limit; y++) { 
+              
+            ll n = (4 * x * x) + (y * y); 
+            if (n <= limit && (n % 12 == 1 || n % 12 == 5)) 
+                prime[n] ^= true; 
+  
+            n = (3 * x * x) + (y * y); 
+            if (n <= limit && n % 12 == 7) 
+                prime[n] ^= true; 
+  
+            n = (3 * x * x) - (y * y); 
+            if (x > y && n <= limit && n % 12 == 11) 
+                prime[n] ^= true; 
+        } 
+    } 
+  
+    for (ll r = 5; r * r < limit; r++) { 
+        if (prime[r]) { 
+            for (ll i = r * r; i < limit; i += r * r) 
+                prime[i] = false; 
+        } 
+    }
+	for (ll i=2; i<limit; i++) if (prime[i]) primes.push_back(i);
+}
+
+// O(nlog(n)) return number of coprime pair in set [a,b]  [c,d] 
+ll coprime(ll a,b,c,d) {
+	N = max(b, d);
+	int mu[N];
+
+	for (ll i=0; i<=N; i++) mu[i] = 1;
+	for(auto p : primes){
+    	for(ll i=1; i*p <= N; i++){
+      		mu[i*p] *= -1;
+    	}
+    	ll pp = p*p;
+    	for(ll i=1; i*pp <= N; i++){
+      		mu[i*pp] = 0;
+    	}
+    }
+	ll sum = 0;
+	for (ll i=1; i<=N; i++) {
+		sum += mu[i] * (b/i - (a-1)/i) * (d/i - (c-1)/i);
+	}	
+	return ll;
+}
+
+
+
 // Primes less than 1000:
 //      2     3     5     7    11    13    17    19    23    29    31    37
 //     41    43    47    53    59    61    67    71    73    79    83    89
