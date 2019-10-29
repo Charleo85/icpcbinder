@@ -8,6 +8,13 @@
 \usepackage{pdflscape}
 \usepackage{multicol}
 
+\newcommand{\blankpage}{
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+}
+
 \renewcommand*{\ttdefault}{pcr}
 \renewcommand\cftsecfont{\fontsize{8}{9}\bfseries}
 \renewcommand\cftsecpagefont{\fontsize{8}{9}\mdseries}
@@ -53,18 +60,18 @@
 \lstset{escapechar=@}
 
 \pagestyle{fancy}
-\fancyhead[L]{Stanford University}
+\fancyhead[L]{University of Virginia}
 \fancyhead[R]{\thepage}
 \fancyfoot[C]{}
 
 \fancypagestyle{plain}
 {
-\fancyhead[L]{Stanford University}
+\fancyhead[L]{University of Virginia}
 \fancyhead[R]{\thepage}
 \fancyfoot[C]{}
 }
 
-\title{\vspace{-4ex}\Large{Stanford University ICPC Team Notebook (2015-16)}}
+\title{\vspace{-4ex}\Large{UVa ICPC Team Notebook (2019-20)}}
 \author{}
 \date{}
 
@@ -76,6 +83,9 @@
 \vspace{-13ex}
 \tableofcontents
 \pagestyle{fancy}
+\newpage
+
+\blankpage %% leave an empty page from content
 
 \input contents.tex
 
